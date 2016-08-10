@@ -129,8 +129,29 @@ body {
 }
 .navButton div {
 	position: absolute;
-	color: white;
-	font-size: 25px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all .5s ease;
+}
+#leftNav div {
+	right: 10px;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	background: url('images/triangleLeft.png')
+}
+#leftNav div:hover {
+	background: url('images/filledTriangleLeft.png')
+}
+#rightNav div:hover {
+	background: url('images/filledTriangleRight.png')
+}
+#rightNav div {
+	left: 10px;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	background: url('images/triangleRight.png')
 }
 #carouselContent {
 	width: 65%;
@@ -154,7 +175,6 @@ body {
 .sidewaysHeader {
 	transform: rotate(270deg);
 	top: calc(50% - 38px);
-	left: -100px;
 	position: absolute;
 	display: inline-block;
 	font-size: 75px;
@@ -171,6 +191,11 @@ body {
 }
 .slideInfo li {
 	list-style: none;
+}
+@media (max-width: 1200px) {
+	.slideInfo {
+		font-size: 18px;
+	}
 }
 @media (max-width: 1000px) {
 	#navigationBar .navigationExternal {
@@ -201,7 +226,7 @@ body {
 		top: calc(50% - 30px);
 	}
 	.slideInfo {
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 @media (max-width: 500px) {
