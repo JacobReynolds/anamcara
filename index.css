@@ -207,6 +207,10 @@ body {
 	width: 30px;
 	border: solid 5px #AFCC67;
 	border-radius: 50%;
+	transition: all .3s ease;
+}
+#carouselButtons div:hover {
+	background: #AFCC67;
 }
 @media (max-width: 1200px) {
 	.slideInfo {
