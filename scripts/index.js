@@ -95,7 +95,7 @@ function initButtons(prevIndex) {
 	header.css("background", "#AFCC67");
 	if (prevIndex != null) {
 		header = $($('.carouselButton')[prevIndex])
-		header.css("background", "#FFFFFF");
+		header.css("background", "");
 	}
 }
 
