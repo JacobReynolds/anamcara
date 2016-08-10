@@ -104,9 +104,11 @@ body {
 */
 #carouselWrapper {
 	z-index: 20;
-	height: 700px;
+	min-height: 750px;
 }
 #carousel {
+	top: 50px;
+	position: relative;
 	height: 600px;
 	/*To fight inline-block spaces breaking 100% width*/
 	
@@ -161,7 +163,6 @@ body {
 }
 .carouselComponent {
 	position: relative;
-	top: 50px;
 }
 .carouselInfo {
 	position: absolute;
@@ -191,6 +192,21 @@ body {
 }
 .slideInfo li {
 	list-style: none;
+}
+#carouselButtons {
+	font-size: 16px;
+	text-align: center;
+	padding-top: 10px;
+	position: relative;
+	top: 50px;
+}
+#carouselButtons div {
+	margin: 5px;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border: solid 5px #AFCC67;
+	border-radius: 50%;
 }
 @media (max-width: 1200px) {
 	.slideInfo {
@@ -227,6 +243,17 @@ body {
 	}
 	.slideInfo {
 		font-size: 16px;
+	}
+}
+@media (max-width: 800px) {
+	.navButton {
+		display: none;
+	}
+	.spacer {
+		display: none;
+	}
+	#carouselContent {
+		width: 100%;
 	}
 }
 @media (max-width: 500px) {

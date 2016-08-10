@@ -1,62 +1,84 @@
 var carouselIndex = 0;
 var carouselLimit = $('.carouselInfo').length - 1
 var carouselTimeout = 0;
+var slideOffFactor = 100;
+var carouselAnimationTime = 1000;
 
-function carouselLeft() {
+function carouselRight(slide) {
 	if (carouselTimeout) return;
 	carouselTimeout = 1;
-	prevCarouselIndex = carouselIndex;
-	if (carouselIndex == 0) {
-		carouselIndex = carouselLimit;
-	} else {
-		carouselIndex--;
-	}
 
+	prevCarouselIndex = carouselIndex;
+
+	if (slide != null) {
+		carouselIndex = slide;
+	} else {
+		if (carouselIndex == carouselLimit) {
+			carouselIndex = 0;
+		} else {
+			carouselIndex++;
+		}
+	}
 	$($('.carouselInfo')[carouselIndex]).css({
 		"display": "inline-block",
-		"left": "65vw"
+		"left": slideOffFactor + "vw"
 	})
 
 	initSidewaysHeader()
 
 	$($('.carouselInfo')[prevCarouselIndex]).animate({
-		left: '-65vw'
-	}, 500, "linear")
+		left: -slideOffFactor + 'vw'
+	}, carouselAnimationTime, "linear")
 	$($('.carouselInfo')[carouselIndex]).animate({
 		left: '0px'
-	}, 500, "linear")
+	}, carouselAnimationTime, "linear")
 
 	setTimeout(function () {
 		carouselTimeout = 0;
-	}, 500)
+	}, carouselAnimationTime)
+
+	initButtons(prevCarouselIndex);
 }
 
-function carouselRight() {
+function carouselLeft(slide) {
 	if (carouselTimeout) return;
 	carouselTimeout = 1;
 
 	prevCarouselIndex = carouselIndex;
-	if (carouselIndex == carouselLimit) {
-		carouselIndex = 0;
+	if (slide != null) {
+		carouselIndex = slide;
 	} else {
-		carouselIndex++;
+		if (carouselIndex == 0) {
+			carouselIndex = carouselLimit;
+		} else {
+			carouselIndex--;
+		}
 	}
 	$($('.carouselInfo')[carouselIndex]).css({
 		"display": "inline-block",
-		"left": "-65vw"
+		"left": -slideOffFactor + "vw"
 	})
 	initSidewaysHeader()
 
 	$($('.carouselInfo')[prevCarouselIndex]).animate({
-		left: '65vw'
-	}, 500, "linear")
+		left: slideOffFactor + 'vw'
+	}, carouselAnimationTime, "linear")
 	$($('.carouselInfo')[carouselIndex]).animate({
 		left: '0px'
-	}, 500, "linear")
+	}, carouselAnimationTime, "linear")
 
 	setTimeout(function () {
 		carouselTimeout = 0;
-	}, 500)
+	}, carouselAnimationTime)
+	initButtons(prevCarouselIndex);
+}
+
+function goToCarouselSlide(slide) {
+	if (slide < carouselIndex) {
+		carouselLeft(slide)
+	} else {
+		carouselRight(slide)
+	}
 }
 
 function initCarousel() {
@@ -64,7 +86,17 @@ function initCarousel() {
 		"display": "inline-block",
 	})
 	initSidewaysHeader()
+	initButtons()
 
+}
+
+function initButtons(prevIndex) {
+	var header = $($('.carouselButton')[carouselIndex])
+	header.css("background", "#AFCC67");
+	if (prevIndex != null) {
+		header = $($('.carouselButton')[prevIndex])
+		header.css("background", "#FFFFFF");
+	}
 }
 
 //Initializes the current sideways header
@@ -81,6 +113,10 @@ function initSidewaysHeader() {
 
 $(window).resize(function () {
 	initSidewaysHeader()
+	if ($(window).width() < 800) {
+		slideOffFactor = 100;
+	}
+
 })
 
 $(document).ready(function () {
