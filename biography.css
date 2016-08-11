@@ -1,0 +1,66 @@
+/*
+Green: #AFCC67
+Purple: #24164D
+Gray: #E6E6E6
+Black: #000000
+White: #FFFFFF
+font-family: 'Crimson Text', serif;
+*/
+
+#aboutHeader {
+	text-align: center;
+}
+#aboutHeader h1 {
+	display: inline-block;
+	font-size: 78px;
+	font-weight: 100;
+}
+#aboutNav {
+	display: inline-block;
+	font-size: 0px;
+}
+#aboutNav div {
+	font-size: 28px;
+	display: block;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+#aboutNav img {
+	height: 25px;
+	opacity: 0;
+}
+#aboutNav .selected {
+	color: #AFCC67;
+}
+#aboutNav .selected img {
+	opacity: 1;
+}
+#aboutNav div:hover {
+	color: #AFCC67;
+}
+#content div p {
+	font-size: 20px;
+	color: black;
+}
+#headshot {
+	height: 600px;
+	width: 400px;
+	border: 5px solid black;
+	display: inline-block;
+	margin-left: 10vw;
+	margin-right: 5vw;
+	margin-bottom: 50px;
+}
+#content div {
+	vertical-align: top;
+}
+#biography {
+	width: 50vw;
+	display: inline-block;
+}
+#resources {
+	display: none;
+}
+.tab {
+	margin-left: 40px;
+}

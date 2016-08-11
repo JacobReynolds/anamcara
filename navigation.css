@@ -1,0 +1,136 @@
+/*
+Green: #AFCC67
+Purple: #24164D
+Gray: #E6E6E6
+Black: #000000
+White: #FFFFFF
+font-family: 'Crimson Text', serif;
+*/
+
+html,
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #FFFFFF;
+	font-family: 'Nunito', sans-serif;
+	overflow-x: hidden;
+}
+
+/*
+-------------------------------------------------HEADER BEGIN
+*/
+
+#navigationBar {
+	display: inline-block;
+	background: #AFCC67;
+	width: 70vw;
+	font-weight: 500;
+	font-size: 20px;
+	height: 50px;
+	position: absolute;
+	top: 75px;
+	right: 0px;
+}
+#navigationBar ul {
+	width: auto;
+	display: inline-block;
+}
+#navigationBar li {
+	list-style-type: none;
+	display: inline-block;
+}
+#navigationBar a {
+	text-decoration: none;
+	color: black;
+	transition: all .25s ease;
+	cursor: pointer;
+}
+#navigationBar a:hover {
+	color: white;
+}
+#header .navigationExternal {
+	position: absolute;
+}
+.navigationExternal {
+	right: 0px;
+	margin-right: 30px;
+	list-style-type: none;
+}
+.navigationExternal img {
+	margin-left: 5px;
+	height: 40px;
+}
+.navigationExternal {
+	padding-right: 40px;
+	margin: 5px;
+}
+#navigationLinks {
+	position: absolute;
+	left: 0px;
+}
+#navigationLinks {
+	margin-top: 12px;
+}
+#navigationLinks li {
+	margin-right: 20px;
+}
+#header #logo {
+	display: inline-block;
+	position: relative;
+	top: 25%;
+	left: calc(15vw - 152px)
+}
+#header {
+	border-bottom: #E6E6E6 solid 2px;
+	height: 200px;
+}
+#footer {
+	border-top: #E6E6E6 solid 2px;
+	text-align: center;
+}
+
+}
+#footer .navigationExternal {
+	display: none;
+}
+#footer .navigationExternal li {
+	display: none
+}
+#footer .navigationExternal img {
+	height: 70px;
+}
+
+/*
+-----------------------------------------------------------------------HEADER END
+*/
+@media (max-width: 1000px) {
+	#navigationBar .navigationExternal {
+		display: none;
+	}
+	#footer .navigationExternal {
+		display: inline-block;
+	}
+	#footer .navigationExternal li {
+		display: inline-block;
+	}
+	#navigationBar {
+		width: 100vw;
+		text-align: center;
+		position: relative;
+	}
+	#header #logo {
+		left: calc(50vw - 152px)
+	}
+	#navigationLinks {
+		position: relative;
+		padding-left: 0px;
+	}
+	#header {
+		height: 250px;
+	}
+}
+@media (max-width: 500px) {
+	#navigationLinks {
+		font-size: 14px;
+	}
+}

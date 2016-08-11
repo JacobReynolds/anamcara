@@ -2,7 +2,7 @@ var carouselIndex = 0;
 var carouselLimit = $('.carouselInfo').length - 1
 var carouselTimeout = 0;
 var slideOffFactor = 100;
-var carouselAnimationTime = 1000;
+var carouselAnimationTime = 750;
 
 function carouselRight(slide, recurse) {
 	if (carouselTimeout) return;
