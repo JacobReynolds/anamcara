@@ -39,7 +39,7 @@ font-family: 'Crimson Text', serif;
 	color: #AFCC67;
 }
 #content div p {
-	font-size: 20px;
+	font-size: 22px;
 	color: black;
 }
 #headshot {
@@ -52,6 +52,7 @@ font-family: 'Crimson Text', serif;
 }
 #content div {
 	vertical-align: top;
+	font-family: 'Crimson Text', serif;
 }
 #biography {
 	width: 50vw;
