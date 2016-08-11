@@ -4,7 +4,7 @@ var carouselTimeout = 0;
 var slideOffFactor = 100;
 var carouselAnimationTime = 1000;
 
-function carouselRight(slide) {
+function carouselRight(slide, recurse) {
 	if (carouselTimeout) return;
 	carouselTimeout = 1;
 
@@ -18,6 +18,7 @@ function carouselRight(slide) {
 		} else {
 			carouselIndex++;
 		}
+		slide = carouselIndex;
 	}
 	$($('.carouselInfo')[carouselIndex]).css({
 		"display": "inline-block",
@@ -35,12 +36,15 @@ function carouselRight(slide) {
 
 	setTimeout(function () {
 		carouselTimeout = 0;
+		if (recurse) {
+			carouselRight(++slide, --recurse)
+		}
 	}, carouselAnimationTime)
 
 	initButtons(prevCarouselIndex);
 }
 
-function carouselLeft(slide) {
+function carouselLeft(slide, recurse) {
 	if (carouselTimeout) return;
 	carouselTimeout = 1;
 
@@ -53,6 +57,7 @@ function carouselLeft(slide) {
 		} else {
 			carouselIndex--;
 		}
+		slide = carouselIndex;
 	}
 	$($('.carouselInfo')[carouselIndex]).css({
 		"display": "inline-block",
@@ -69,15 +74,20 @@ function carouselLeft(slide) {
 
 	setTimeout(function () {
 		carouselTimeout = 0;
+		if (recurse) {
+			carouselLeft(--slide, --recurse)
+		}
 	}, carouselAnimationTime)
 	initButtons(prevCarouselIndex);
 }
 
 function goToCarouselSlide(slide) {
+	if (slide === carouselIndex) return;
 	if (slide < carouselIndex) {
-		carouselLeft(slide)
+		//-1 because of zero index
+		carouselLeft(null, (carouselIndex - slide) - 1)
 	} else {
-		carouselRight(slide)
+		carouselRight(null, (slide - carouselIndex) - 1)
 	}
 }
 
