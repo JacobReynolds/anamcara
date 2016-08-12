@@ -13,7 +13,6 @@ body {
 	padding: 0px;
 	background: #FFFFFF;
 	font-family: 'Lato', sans-serif;
-	overflow-x: hidden;
 }
 
 /*
@@ -114,7 +113,7 @@ body {
 		display: inline-block;
 	}
 	#navigationBar {
-		width: 100vw;
+		width: 100%;
 		text-align: center;
 		position: relative;
 	}
