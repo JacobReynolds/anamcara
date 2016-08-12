@@ -44,26 +44,26 @@ font-family: 'Crimson Text', serif;
 	height: 100px;
 	width: 100px;
 	position: absolute;
-	background: url('images/triangleLeft.png')
+	background: url('../images/triangleLeft.png')
 }
 #leftNav div:hover {
-	background: url('images/filledTriangleLeft.png')
+	background: url('../images/filledTriangleLeft.png')
 }
 #rightNav div:hover {
-	background: url('images/filledTriangleRight.png')
+	background: url('../images/filledTriangleRight.png')
 }
 #rightNav div {
 	left: 10px;
 	height: 100px;
 	width: 100px;
 	position: absolute;
-	background: url('images/triangleRight.png')
+	background: url('../images/triangleRight.png')
 }
 #carouselContent {
 	width: 65%;
 	height: 600px;
 	display: inline-block;
-	background: linear-gradient( rgba(36, 22, 77, 0.9), rgba(36, 22, 77, 0.9)), url('images/background.png');
+	background: linear-gradient( rgba(36, 22, 77, 0.9), rgba(36, 22, 77, 0.9)), url('../images/background.png');
 }
 .carouselComponent {
 	position: relative;
