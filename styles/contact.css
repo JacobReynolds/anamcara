@@ -1,0 +1,23 @@
+#contactHeader {
+	text-align: center;
+}
+#contactHeader h1 {
+	font-size: 78px;
+	font-weight: 100;
+}
+#contactContent {
+	text-align: center;
+	margin: auto;
+	display: block;
+	font-size: 24px;
+	width: 50vw;
+	margin-bottom: 80px;
+}
+@media (max-width: 800px) {
+	#contactHeader h1 {
+		font-size: 45px;
+	}
+	#contactContent {
+		width: 80vw;
+	}
+}

@@ -1,0 +1,16 @@
+#linksHeader {
+	text-align: center;
+}
+#linksHeader h1 {
+	font-size: 78px;
+	font-weight: 100;
+}
+#linksContent {
+	text-align: center;
+	margin-bottom: 100px;
+}
+@media (max-width: 600px) {
+	#linksHeader h1 {
+		font-size: 50px;
+	}
+}
