@@ -66,8 +66,8 @@ font-family: 'Crimson Text', serif;
 	width: 65%;
 	height: 600px;
 	display: inline-block;
-	background: -webkit-linear-gradient(rgba(36, 22, 77, 0.9), rgba(36, 22, 77, 0.9)), url('../images/background.png');
-	background: linear-gradient( rgba(36, 22, 77, 0.9), rgba(36, 22, 77, 0.9)), url('../images/background.png');
+	background: -webkit-linear-gradient(rgba(36, 22, 77, 0.9), rgba(36, 22, 77, 0.9)), url('../images/backgroundCompressed.png');
+	background: linear-gradient( rgba(36, 22, 77, 0.9), rgba(36, 22, 77, 0.9)), url('../images/backgroundCompressed.png');
 }
 .carouselComponent {
 	position: relative;
