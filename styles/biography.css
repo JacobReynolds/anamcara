@@ -22,18 +22,21 @@ font-family: 'Crimson Text', serif;
 #aboutNav div {
 	font-size: 28px;
 	display: block;
+	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 	cursor: pointer;
 }
 #aboutNav img {
 	height: 25px;
 	opacity: 0;
+	filter: alpha(opacity=0);
 }
 #aboutNav .selected {
 	color: #AFCC67;
 }
 #aboutNav .selected img {
 	opacity: 1;
+	filter: alpha(opacity=100);
 }
 #aboutNav div:hover {
 	color: #AFCC67;

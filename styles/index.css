@@ -36,7 +36,10 @@ font-family: 'Crimson Text', serif;
 .navButton div {
 	position: absolute;
 	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
+	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 #leftNav div {
@@ -63,6 +66,7 @@ font-family: 'Crimson Text', serif;
 	width: 65%;
 	height: 600px;
 	display: inline-block;
+	background: -webkit-linear-gradient(rgba(36, 22, 77, 0.9), rgba(36, 22, 77, 0.9)), url('../images/background.png');
 	background: linear-gradient( rgba(36, 22, 77, 0.9), rgba(36, 22, 77, 0.9)), url('../images/background.png');
 }
 .carouselComponent {
@@ -78,6 +82,8 @@ font-family: 'Crimson Text', serif;
 	width: 100%;
 }
 .sidewaysHeader {
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
 	transform: rotate(270deg);
 	top: calc(50% - 38px);
 	position: absolute;
@@ -89,6 +95,8 @@ font-family: 'Crimson Text', serif;
 	left: 150px;
 	position: relative;
 	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 	display: inline-block;
 	max-width: calc(100% - 150px);
@@ -111,6 +119,7 @@ font-family: 'Crimson Text', serif;
 	width: 30px;
 	border: solid 5px #AFCC67;
 	border-radius: 50%;
+	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
 }
 #carouselButtons div:hover {
