@@ -17,6 +17,7 @@ font-family: 'Crimson Text', serif;
 	height: 600px;
 	/*To fight inline-block spaces breaking 100% width*/
 	font-size: 0px;
+	overflow-x: hidden;
 }
 .spacer {
 	z-index: 30;
@@ -44,23 +45,27 @@ font-family: 'Crimson Text', serif;
 }
 #leftNav div {
 	right: 10px;
-	height: 100px;
-	width: 100px;
+	height: 70px;
+	width: 70px;
 	position: absolute;
-	background: url('../images/triangleLeft.png')
+	background: url('../images/triangleLeft.png');
+	background-size: 70px 70px;
 }
 #leftNav div:hover {
-	background: url('../images/filledTriangleLeft.png')
+	background: url('../images/filledTriangleLeft.png');
+	background-size: 70px 70px;
 }
 #rightNav div:hover {
-	background: url('../images/filledTriangleRight.png')
+	background: url('../images/filledTriangleRight.png');
+	background-size: 70px 70px;
 }
 #rightNav div {
 	left: 10px;
-	height: 100px;
-	width: 100px;
+	height: 70px;
+	width: 70px;
 	position: absolute;
-	background: url('../images/triangleRight.png')
+	background: url('../images/triangleRight.png');
+	background-size: 70px 70px;
 }
 #carouselContent {
 	width: 65%;
