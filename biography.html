@@ -88,7 +88,7 @@
 			<li>
 				<a href="http://anamcaraconsulting.com/wordpress/"><img src="images/wordpress.png" /></a>
 			</li>
-			<p>2016 Anam Cara Consulting</p>
+			<p><span id="copyrightYear"></span> Anam Cara Consulting</p>
 			<p>All rights reserved</p>
 		</ul>
 	</div>
@@ -97,5 +97,11 @@
 </body>
 <script src="scripts/jquery-min.js"></script>
 <script src="scripts/biography.js"></script>
+<script>
+	var year = new Date();
+	year = year.getFullYear();
+	document.getElementById('copyrightYear').innerHTML = year;
+
+</script>
 
 </html>
