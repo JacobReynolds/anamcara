@@ -1,17 +1,63 @@
+/*
+Green: #AFCC67
+Purple: #24164D
+Gray: #E6E6E6
+Black: #000000
+White: #FFFFFF
+font-family: 'Crimson Text', serif;
+*/
+
 #toolsHeader {
-	text-align: center;
+	text-align: left;
+	padding-left: 100px;
 }
 #toolsHeader h1 {
 	font-size: 78px;
 	font-weight: 100;
 }
 #toolsContent {
-	text-align: center;
-	margin: auto;
-	display: block;
 	font-size: 24px;
-	width: 50vw;
+	width: 100vw;
 	margin-bottom: 80px;
+}
+.tool img {
+	height: 250px;
+}
+.tool {
+	color: white;
+	width: 700px;
+	vertical-align: top;
+	font-size: 20px;
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 50px;
+	background: #24164D;
+	margin-bottom: 30px;
+	transition: all .5s ease;
+}
+.triangle {
+	height: 30px;
+	width: 30px;
+	background: url('../images/filledGreenTriangleRight.png');
+	background-size: 30px 30px;
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	transition: all .5s ease;
+}
+.title {
+	width: 600px;
+}
+.tool:hover {
+	width: calc(100vw - 50px);
+	background: #AFCC67;
+}
+.tool:hover > .triangle {
+	transform: rotate(180deg);
+	background: url('../images/filledPurpleTriangleRight.png');
+	background-size: 30px 30px;
 }
 @media (max-width: 800px) {
 	#toolsHeader h1 {
@@ -19,5 +65,28 @@
 	}
 	#toolsContent {
 		width: 80vw;
+	}
+}
+@media (max-width: 750px) {
+	.triangle {
+		display: none;
+	}
+	#toolsHeader {
+		text-align: center;
+		padding: 0px;
+		font-weight: 500;
+	}
+	.tool {
+		width: 100vw;
+		display: block;
+		text-align: center;
+		padding: 0px;
+	}
+	.title {
+		width: 100%;
+		min-height: 50px;
+	}
+	.tool:hover {
+		width: 100vw;
 	}
 }
