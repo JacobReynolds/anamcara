@@ -50,6 +50,10 @@ font-family: 'Crimson Text', serif;
 .title {
 	width: 600px;
 }
+.title a {
+	text-decoration: none;
+	color: white;
+}
 .tool:hover {
 	width: calc(100vw - 50px);
 	background: #AFCC67;
