@@ -100,6 +100,9 @@ font-family: 'Crimson Text', serif;
 		height: 500px;
 		width: 300px;
 	}
+	#aboutHeader {
+		margin-left: 0px;
+	}
 	#aboutHeader h1 {
 		font-size: 50px;
 	}
