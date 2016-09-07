@@ -132,6 +132,20 @@ body {
 }
 @media (max-width: 550px) {
 	#navigationLinks {
-		font-size: 14px;
+		display: block;
+	}
+	#navigationBar {
+		top: 0px;
+		height: auto;
+	}
+	#navigationBar li {
+		display: block;
+		line-height: normal;
+	}
+	#header {
+		height: auto;
+	}
+	#carousel {
+		top: 0px !important;
 	}
 }

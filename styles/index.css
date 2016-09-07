@@ -172,7 +172,7 @@ font-family: 'Crimson Text', serif;
 	.slideInfo {
 		font-size: 15px;
 		left: 75px;
-		max-width: calc(100% - 100px);
+		max-width: calc(100% - 50px);
 	}
 	.sidewaysHeader {
 		font-size: 50px;
