@@ -168,7 +168,7 @@ font-family: 'Crimson Text', serif;
 		padding-right: 10px;
 	}
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
 	.slideInfo {
 		font-size: 15px;
 		left: 75px;
@@ -176,5 +176,12 @@ font-family: 'Crimson Text', serif;
 	}
 	.sidewaysHeader {
 		font-size: 50px;
+	}
+	#carouselWrapper {
+		min-height: auto;
+	}
+	#carouselButtons {
+		top: 0px;
+		margin-bottom: 20px;
 	}
 }
