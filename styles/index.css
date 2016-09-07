@@ -134,6 +134,9 @@ font-family: 'Crimson Text', serif;
 #carouselButtons div:hover {
 	background: #AFCC67;
 }
+.hidden {
+	display: none;
+}
 @media (max-width: 1200px) {
 	.slideInfo {
 		font-size: 18px;
