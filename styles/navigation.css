@@ -72,6 +72,7 @@ body {
 }
 #navigationLinks li {
 	margin-right: 20px;
+	line-height: 25px;
 }
 #header #logo {
 	display: inline-block;
@@ -129,7 +130,7 @@ body {
 		height: 250px;
 	}
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
 	#navigationLinks {
 		font-size: 14px;
 	}

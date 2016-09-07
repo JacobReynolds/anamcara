@@ -1,13 +1,90 @@
 #linksHeader {
-	text-align: center;
+	text-align: left;
+	padding-left: 100px;
 }
 #linksHeader h1 {
 	font-size: 78px;
 	font-weight: 100;
 }
 #linksContent {
-	text-align: center;
-	margin-bottom: 100px;
+	font-size: 24px;
+	width: 100vw;
+	margin-bottom: 80px;
+}
+.link img {
+	height: 250px;
+}
+.link {
+	color: white;
+	width: 700px;
+	vertical-align: top;
+	font-size: 20px;
+	position: relative;
+	min-height: 50px;
+	height: auto;
+	line-height: 50px;
+	padding-left: 50px;
+	background: #24164D;
+	margin-bottom: 30px;
+	transition: all .5s ease;
+}
+.triangle {
+	height: 30px;
+	width: 30px;
+	background: url('../images/filledGreenTriangleRight.png');
+	background-size: 30px 30px;
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	transition: all .5s ease;
+}
+.title {
+	width: 600px;
+}
+.title a {
+	text-decoration: none;
+	color: white;
+}
+.link:hover {
+	width: calc(100vw - 50px);
+	background: #AFCC67;
+}
+.link:hover > .triangle {
+	transform: rotate(180deg);
+	background: url('../images/filledPurpleTriangleRight.png');
+	background-size: 30px 30px;
+}
+@media (max-width: 800px) {
+	#linksHeader h1 {
+		font-size: 45px;
+	}
+	#linksContent {
+		width: 80vw;
+	}
+}
+@media (max-width: 750px) {
+	.triangle {
+		display: none;
+	}
+	#linksHeader {
+		text-align: center;
+		padding: 0px;
+		font-weight: 500;
+	}
+	.link {
+		width: 100vw;
+		display: block;
+		text-align: center;
+		padding: 0px;
+	}
+	.title {
+		width: 100%;
+		min-height: 50px;
+	}
+	.link:hover {
+		width: 100vw;
+	}
 }
 @media (max-width: 600px) {
 	#linksHeader h1 {
