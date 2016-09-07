@@ -144,6 +144,7 @@ body {
 	}
 	#header {
 		height: auto;
+		border: none !important;
 	}
 	#carousel {
 		top: 0px !important;
