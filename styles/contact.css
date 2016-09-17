@@ -11,11 +11,18 @@
 	display: block;
 	font-size: 24px;
 	width: 50vw;
-	margin-bottom: 80px;
+	margin-bottom: 40px;
+}
+.formSpacer {
+	width: 32.97% !important;
 }
 @media (max-width: 800px) {
 	#contactHeader h1 {
 		font-size: 45px;
+	}
+	.formSpacer {
+		margin-bottom: 10px;
+		width: 100% !important;
 	}
 	#contactContent {
 		width: 80vw;

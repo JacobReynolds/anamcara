@@ -7,8 +7,12 @@ White: #FFFFFF
 font-family: 'Crimson Text', serif;
 */
 
+
+/*Replace headshotBackup class with headshot class when headshot is available*/
+
 #aboutHeader {
-	text-align: left;
+	text-align: center;
+	/*align left when headshot comes in*/
 	margin-left: 5vw;
 }
 #aboutHeader h1 {
@@ -49,7 +53,7 @@ font-family: 'Crimson Text', serif;
 	font-size: 22px;
 	color: black;
 }
-#headshot {
+#headshotBackup {
 	height: 600px;
 	width: 400px;
 	border: 5px solid black;
@@ -61,10 +65,16 @@ font-family: 'Crimson Text', serif;
 	vertical-align: top;
 	font-family: 'Crimson Text', serif;
 }
+#content {
+	text-align: center;
+	/*remove when headshot comes*/
+}
 #biography {
 	width: 50vw;
 	display: inline-block;
 	margin-left: 5vw;
+	text-align: left;
+	/*remove text-align when headshot available*/
 }
 #resources {
 	width: 50vw;
@@ -73,7 +83,7 @@ font-family: 'Crimson Text', serif;
 	text-indent: -30px;
 }
 @media (max-width: 1200px) {
-	#headshot {
+	#headshotBackup {
 		margin: auto;
 		display: block;
 	}
@@ -96,7 +106,7 @@ font-family: 'Crimson Text', serif;
 	}
 }
 @media (max-width: 600px) {
-	#headshot {
+	#headshotBackup {
 		height: 500px;
 		width: 300px;
 	}
