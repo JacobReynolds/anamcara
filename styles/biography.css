@@ -81,6 +81,8 @@ font-family: 'Crimson Text', serif;
 	display: none;
 	margin-left: calc(5vw + 30px);
 	text-indent: -30px;
+	text-align: left;
+	/*remove text-align when headshot available*/
 }
 @media (max-width: 1200px) {
 	#headshotBackup {
